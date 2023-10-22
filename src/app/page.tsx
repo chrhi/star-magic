@@ -1,12 +1,9 @@
-import MaxWidthWrapper from "@/components/MaxWidthWrapper";
-import { SignInForm } from "@/components/forms/SigninForm";
+import { FC } from "react";
 
-export default function Home() {
-  return (
-    <>
-      <MaxWidthWrapper className=" flex pt-12  items-center justify-center ">
-        <SignInForm />
-      </MaxWidthWrapper>
-    </>
-  );
-}
+interface pageAbdullahProps {}
+
+const page: FC = ({}) => {
+  return <div>page</div>;
+};
+
+export default page;
