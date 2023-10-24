@@ -1,9 +1,7 @@
-import { FC } from "react";
+import React from "react";
 
-interface pageAbdullahProps {}
-
-const page: FC = ({}) => {
+function page() {
   return <div>page</div>;
-};
+}
 
 export default page;

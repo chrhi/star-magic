@@ -6,10 +6,10 @@
  * Email: mahdi.chahri55@gmail.com
  */
 
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 
 import { cn } from "@/lib/utils";
-import { buttonVariants } from "../ui/button";
+import { buttonVariants } from "../../ui/button";
 
 /*
  * PagesNav component represents the navigation bar for the pages.

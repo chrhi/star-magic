@@ -1,76 +1,91 @@
-import { type Metadata } from "next";
-import Link from "next/link";
-import { redirect } from "next/navigation";
+import { FC } from "react";
 
-import { currentUser } from "@clerk/nextjs";
+interface pageAbdullahProps {}
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { OAuthSignIn } from "@/components/auth/oauth-signin";
-import { SignInForm } from "@/components/forms/signin-form";
-import { Shell } from "@/components/shells/shell";
-
-export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL ?? ""),
-  title: "Sign In",
-  description: "Sign in to your account",
+const page: FC = ({}) => {
+  return (
+    <div>
+      <div className="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+        <form className="space-y-6" action="#">
+          <h5 className="text-xl font-medium text-gray-900 dark:text-white">
+            Sign in to our plathtmlForm
+          </h5>
+          <div>
+            <label
+              htmlFor="email"
+              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >
+              Your email
+            </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+              placeholder="name@company.com"
+              required
+            />
+          </div>
+          <div>
+            <label
+              htmlFor="password"
+              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >
+              Your password
+            </label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="••••••••"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+              required
+            />
+          </div>
+          <div className="flex items-start">
+            <div className="flex items-start">
+              <div className="flex items-center h-5">
+                <input
+                  id="remember"
+                  type="checkbox"
+                  value=""
+                  className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
+                  required
+                />
+              </div>
+              <label
+                htmlFor="remember"
+                className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              >
+                Remember me
+              </label>
+            </div>
+            <a
+              href="#"
+              className="ml-auto text-sm text-blue-700 hover:underline dark:text-blue-500"
+            >
+              Lost Password?
+            </a>
+          </div>
+          <button
+            type="submit"
+            className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            Login to your account
+          </button>
+          <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
+            Not registered?{" "}
+            <a
+              href="#"
+              className="text-blue-700 hover:underline dark:text-blue-500"
+            >
+              Create account
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
 };
 
-export default async function SignInPage() {
-  const user = await currentUser();
-  if (user) redirect("/");
-
-  return (
-    <Shell className="max-w-lg">
-      <Card>
-        <CardHeader className="space-y-1">
-          <CardTitle className="text-2xl">Sign in</CardTitle>
-          <CardDescription>
-            Choose your preferred sign in method
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="grid gap-4">
-          <OAuthSignIn />
-          <div className="relative">
-            <div className="absolute inset-0 flex items-center">
-              <span className="w-full border-t" />
-            </div>
-            <div className="relative flex justify-center text-xs uppercase">
-              <span className="bg-background px-2 text-muted-foreground">
-                Or continue with
-              </span>
-            </div>
-          </div>
-          <SignInForm />
-        </CardContent>
-        <CardFooter className="flex flex-wrap items-center justify-between gap-2">
-          <div className="text-sm text-muted-foreground">
-            <span className="mr-1 hidden sm:inline-block">
-              Don&apos;t have an account?
-            </span>
-            <Link
-              aria-label="Sign up"
-              href="/signup"
-              className="text-primary underline-offset-4 transition-colors hover:underline"
-            >
-              Sign up
-            </Link>
-          </div>
-          <Link
-            aria-label="Reset password"
-            href="/signin/reset-password"
-            className="text-sm text-primary underline-offset-4 transition-colors hover:underline"
-          >
-            Reset password
-          </Link>
-        </CardFooter>
-      </Card>
-    </Shell>
-  );
-}
+export default page;
