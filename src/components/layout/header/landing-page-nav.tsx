@@ -16,8 +16,19 @@ const LnadingPageNav = () => {
             </Link>
           </div>
           <div className=" w-[50%]  h-[60px] gap-x-5 flex justify-end items-center mr-2">
-            <Button variant="ghost">pricing</Button>
-            <Button variant="ghost">sign in</Button>
+            <Link
+              className={buttonVariants({ variant: "ghost" })}
+              href="/pricing"
+            >
+              pricing
+            </Link>
+            <Link
+              className={buttonVariants({ variant: "ghost" })}
+              href="/signin"
+              target="_blank"
+            >
+              sign in
+            </Link>
 
             <Link
               className={buttonVariants({})}

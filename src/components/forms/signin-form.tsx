@@ -1,119 +1,99 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 
-import * as React from "react";
-import { useRouter } from "next/navigation";
-import { useSignIn } from "@clerk/nextjs";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import type { z } from "zod";
+import Image from "next/image";
+import { FC } from "react";
+import { Input } from "../ui/input";
+import { Button, buttonVariants } from "../ui/button";
+import { cn } from "@/lib/utils";
+import { signIn } from "next-auth/react";
+import Link from "next/link";
+import { PasswordInput } from "../password-input";
 
-import { catchClerkError, cn } from "@/lib/utils";
-import { authSchema } from "@/lib/validators/auth";
-import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Icons } from "@/components/Icons";
-import { PasswordInput } from "@/components/password-input";
-
-type Inputs = z.infer<typeof authSchema>;
-
-export function SignInForm() {
-  const router = useRouter();
-  const { isLoaded, signIn, setActive } = useSignIn();
-  const [isPending, startTransition] = React.useTransition();
-
-  // react-hook-form
-  const form = useForm<Inputs>({
-    resolver: zodResolver(authSchema),
-    defaultValues: {
-      email: "",
-      password: "",
-    },
-  });
-
-  function onSubmit(data: Inputs) {
-    if (!isLoaded) return;
-
-    startTransition(async () => {
-      try {
-        const result = await signIn.create({
-          identifier: data.email,
-          password: data.password,
-        });
-
-        if (result.status === "complete") {
-          await setActive({ session: result.createdSessionId });
-
-          router.push(`${window.location.origin}/`);
-        } else {
-          /*Investigate why the login hasn't completed */
-          console.log(result);
-        }
-      } catch (err) {
-        catchClerkError(err);
-      }
-    });
-  }
-
+const SigninForm: FC = ({}) => {
   return (
-    <Form {...form}>
-      <form
-        className="grid gap-4"
-        onSubmit={(...args) => void form.handleSubmit(onSubmit)(...args)}
-      >
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Email</FormLabel>
-              <FormControl>
-                <Input
-                  type="text"
-                  placeholder="rodneymullen180@gmail.com"
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="password"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Password</FormLabel>
-              <FormControl>
-                <PasswordInput placeholder="**********" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+    <>
+      <form className=" flex flex-col items-start w-full gap-y-4">
+        <div className="w-full h-fit">
+          <label
+            htmlFor="email"
+            className="block mb-2 text-sm font-medium text-gray-900"
+          >
+            Email Address
+          </label>
+          <Input
+            type="email"
+            name="email"
+            id="email"
+            className="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-1 px-4 h-[50px]"
+            placeholder="name@company.com"
+          />
+          {/* <p className='mt-1 text-sm text-red-600'>{errors.email?.message}</p> */}
+        </div>
+        <div className="w-full h-fit">
+          <label
+            htmlFor="password"
+            className="block mb-2 text-sm font-medium text-gray-900"
+          >
+            Email Address
+          </label>
+          <PasswordInput
+            type="password"
+            name="password"
+            id="password"
+            className="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-1 px-4 h-[50px]"
+            placeholder="*******"
+          />
+          {/* <p className='mt-1 text-sm text-red-600'>{errors.email?.message}</p> */}
+        </div>
+
         <Button
-          className={cn("rounded-full p-4 ")}
-          size="lg"
+          //   isLoading={isLoading}
           type="submit"
-          disabled={isPending}
+          //   className={buttonVariants({ size: 'lg', variant: 'rukia' })}
+          size="lg"
+          className="w-full"
         >
-          {isPending && (
-            <Icons.spinner
-              className="mr-2 h-4 w-4 animate-spin"
-              aria-hidden="true"
-            />
-          )}
-          Sign in
-          <span className="sr-only">Sign in</span>
+          Login to your account
         </Button>
+
+        <div className="text-sm font-medium text-gray-500">
+          Don't have an account?{" "}
+          <Link
+            href="/auth/signup"
+            className="text-blue-500 hover:underline ml-2"
+          >
+            sign up.
+          </Link>
+        </div>
       </form>
-    </Form>
+
+      <div className="relative mt-4 w-[95%]  mx-auto">
+        <div className="absolute inset-0 flex items-center">
+          <span className="w-full border-t" />
+        </div>
+        <div className="relative flex justify-center text-xs ">
+          <span className="bg-background px-2 text-muted-foreground">
+            Or continue with
+          </span>
+        </div>
+      </div>
+      <Button
+        className={cn(
+          buttonVariants({ size: "lg", variant: "secondary" }),
+          "w-[100%]  mr-auto p-4 mt-4 flex justify-center gap-x-6"
+        )}
+      >
+        <Image
+          src="/assets/Google__G__Logo.svg.webp"
+          alt="github"
+          width={20}
+          height={20}
+        />
+        continue with google
+      </Button>
+    </>
   );
-}
+};
+
+export default SigninForm;
