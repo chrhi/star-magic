@@ -4,9 +4,9 @@ import { buttonVariants } from "../../ui/button";
 
 import { ArrowRight } from "lucide-react";
 
-import MobileNav from "./MobileNav";
+import MobileNav from "./mobil-nav";
 import Image from "next/image";
-import { PagesNav } from "./PagesNav";
+import { PagesNav } from "./navs";
 import SearchBar from "./dropDown/SearchBar";
 import MessageNofinications from "./dropDown/MessageNofinications";
 import TaskNotifictions from "./dropDown/TaskNotifictions";
