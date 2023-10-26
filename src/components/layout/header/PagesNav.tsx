@@ -24,22 +24,17 @@ export function PagesNav() {
       path: "/app",
     },
     {
-      name: "Chat",
+      name: "Products",
       path: "/app/chat",
     },
     {
-      name: "Projects",
+      name: "Orders",
       path: "/app/project",
     },
-    // {
-    //   name : "Tasks" , path : "/app/tasks"
-    // },
-    // {
-    //   name : "Brain" , path : "/app/brain"
-    // },
-    // {
-    //   name : "Invoices" , path : "/app/map"
-    // }
+    {
+      name: "WebSite",
+      path: "/app/tasks",
+    },
   ];
 
   return (
