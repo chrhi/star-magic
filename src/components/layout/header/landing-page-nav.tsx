@@ -25,16 +25,11 @@ const LnadingPageNav = () => {
             <Link
               className={buttonVariants({ variant: "ghost" })}
               href="/signin"
-              target="_blank"
             >
               sign in
             </Link>
 
-            <Link
-              className={buttonVariants({})}
-              href="/dashboard"
-              target="_blank"
-            >
+            <Link className={buttonVariants({})} href="/dashboard">
               Get started <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>
