@@ -1,13 +1,37 @@
+"use client";
+
 import Link from "next/link";
 import MaxWidthWrapper from "../../MaxWidthWrapper";
 
 import Image from "next/image";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const LnadingPageNav = () => {
+  const [scrolling, setScrolling] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <nav className="sticky h-20 inset-x-0 top-0 z-30 w-full  border-gray-200 bg-white/75 backdrop-blur-lg transition-all">
+    <nav
+      className={` bg-transparent sticky h-20 inset-x-0 top-0 z-30 w-full  border-gray-200  backdrop-blur-lg transition-all ${
+        scrolling ? " border-b bg-white/75" : ""
+      }`}
+    >
       <MaxWidthWrapper>
         <div className="flex h-20 items-center justify-between  border-zinc-200">
           <div className="w-[50%] h-full flex items-center justify-start gap-x-4">

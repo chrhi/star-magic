@@ -30,6 +30,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "date-fns": "^2.30.0",
+    "framer-motion": "^10.16.4",
     "lucide-react": "^0.279.0",
     "next": "latest",
     "next-auth": "^4.24.3",
