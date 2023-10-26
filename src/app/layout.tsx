@@ -1,4 +1,4 @@
-import Navbar from "@/components/layout/Navbar";
+import Navbar from "@/components/layout/header/Navbar";
 import Providers from "@/components/Providers";
 import { cn, constructMetadata } from "@/lib/utils";
 import { Inter } from "next/font/google";
