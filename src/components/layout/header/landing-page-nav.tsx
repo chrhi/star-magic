@@ -48,13 +48,16 @@ const LnadingPageNav = () => {
             </Link>
             <Link
               className={buttonVariants({ variant: "ghost" })}
-              href="/signin"
+              href="https://github.com/chrhi/owner"
             >
-              sign in
+              github
             </Link>
 
-            <Link className={buttonVariants({})} href="/dashboard">
-              Get started <ArrowRight className="ml-2 h-5 w-5" />
+            <Link
+              className={buttonVariants({ variant: "secondary" })}
+              href="/dashboard"
+            >
+              sign in
             </Link>
           </div>
         </div>
