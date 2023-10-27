@@ -1,4 +1,4 @@
-import * as z from "zod"
+import * as z from "zod";
 
 export const authSchema = z.object({
   email: z.string().email({
@@ -14,7 +14,7 @@ export const authSchema = z.object({
       message:
         "Password must contain at least 8 characters, one uppercase, one lowercase, one number and one special character",
     }),
-})
+});
 
 export const verifyEmailSchema = z.object({
   code: z
@@ -23,11 +23,11 @@ export const verifyEmailSchema = z.object({
       message: "Verification code must be 6 characters long",
     })
     .max(6),
-})
+});
 
 export const checkEmailSchema = z.object({
   email: authSchema.shape.email,
-})
+});
 
 export const resetPasswordSchema = z
   .object({
@@ -38,7 +38,7 @@ export const resetPasswordSchema = z
   .refine((data) => data.password === data.confirmPassword, {
     message: "Passwords do not match",
     path: ["confirmPassword"],
-  })
+  });
 
 export const userPrivateMetadataSchema = z.object({
   role: z.enum(["user", "admin", "super_admin"]),
@@ -46,4 +46,4 @@ export const userPrivateMetadataSchema = z.object({
   stripeSubscriptionId: z.string().optional().nullable(),
   stripeCustomerId: z.string().optional().nullable(),
   stripeCurrentPeriodEnd: z.string().optional().nullable(),
-})
+});

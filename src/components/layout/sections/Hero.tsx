@@ -14,7 +14,7 @@ const Hero: FC = ({}) => {
       <div className="flex  max-xl:flex-col gap-10 ">
         <div className="flex w-[50%]  flex-col justify-center">
           <h1 className="text-7xl font-bold text-start">
-            Start your online business tody with
+            Start your online store tody with
             <span className="text-primary"> Owner</span>
           </h1>
 
