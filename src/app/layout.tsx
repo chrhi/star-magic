@@ -1,4 +1,3 @@
-import Navbar from "@/components/layout/header/main-nav";
 import Providers from "@/components/Providers";
 import { cn, constructMetadata } from "@/lib/utils";
 import { Inter } from "next/font/google";
@@ -7,7 +6,6 @@ import "./globals.css";
 //#ff4500
 
 import { Toaster } from "@/components/ui/toaster";
-import LnadingPageNav from "@/components/layout/header/landing-page-nav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,9 +22,8 @@ export default function RootLayout({
         <body
           className={cn("min-h-screen font-sans antialiased ", inter.className)}
         >
-          <Toaster />
-          <LnadingPageNav />
           {children}
+          <Toaster />
         </body>
       </Providers>
     </html>
