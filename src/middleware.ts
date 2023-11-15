@@ -6,7 +6,7 @@ import { UserRole } from "./types";
 export default authMiddleware({
   // Public routes are routes that don't require authentication
   publicRoutes: [
-    "/",
+    "/form",
     "/pricing",
     "/signin(.*)",
     "/signup(.*)",

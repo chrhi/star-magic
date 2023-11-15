@@ -1,12 +1,12 @@
-import Navbar from "@/components/layout/header/main-nav";
 import Providers from "@/components/Providers";
 import { cn, constructMetadata } from "@/lib/utils";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 
 //#ff4500
 
 import { Toaster } from "@/components/ui/toaster";
+import NoAuthNavBar from "@/components/layout/header/NoAuthNavBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,14 +21,11 @@ export default function RootLayout({
     <html lang="en" className="light">
       <Providers>
         <body
-          className={cn(
-            "min-h-screen font-sans antialiased bg-[#f4f6f9]",
-            inter.className
-          )}
+          className={cn("min-h-screen font-sans antialiased ", inter.className)}
         >
-          <Toaster />
-          <Navbar />
+          <NoAuthNavBar />
           {children}
+          <Toaster />
         </body>
       </Providers>
     </html>
