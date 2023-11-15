@@ -1,4 +1,5 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import CvCanadaForm from "@/components/forms/cv-canada-form";
 import { TypographyH1 } from "@/components/typography/h1";
 import type { FC } from "react";
 
@@ -18,7 +19,7 @@ const page: FC = ({}) => {
         {/* why we collect these informations  */}
       </div>
 
-      {/* form that has everything we need */}
+      <CvCanadaForm />
     </MaxWidthWrapper>
   );
 };
