@@ -21,7 +21,7 @@ export type Intershipes = {
   start_at: string;
   ends_at: string;
 };
-export type courses = {
+export type Courses = {
   title: string;
   provider: string;
   start_at: string;

@@ -25,12 +25,16 @@ import {
   CardTitle,
 } from "../ui/card";
 import EducationModle from "@/app/(temporary)/_components/models/education-modle";
-import { Education } from "@/types";
+import { Education, Experience, Intershipes, Skills, Courses } from "@/types";
 
 interface CvCanadaFormAbdullahProps {}
 
 const CvCanadaForm: FC = ({}) => {
   const [data, setData] = useState<Education[]>([]);
+  const [experience, setExperience] = useState<Experience[]>([]);
+  const [course, setCourse] = useState<Courses[]>([]);
+  const [skills, setSkills] = useState<Skills[]>([]);
+  const [internshipes, setIntershipes] = useState<Intershipes[]>([]);
 
   const form = useForm<z.infer<typeof CvCanadaSchema>>({
     //@ts-ignore
