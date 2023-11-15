@@ -21,7 +21,10 @@ export default function RootLayout({
     <html lang="en">
       <Providers>
         <body
-          className={cn("min-h-screen font-sans antialiased ", inter.className)}
+          className={cn(
+            "min-h-screen font-sans antialiased selection:bg-violet-600 selection:text-white ",
+            inter.className
+          )}
         >
           <NoAuthNavBar />
           {children}
