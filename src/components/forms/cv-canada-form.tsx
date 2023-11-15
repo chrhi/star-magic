@@ -137,13 +137,28 @@ const CvCanadaForm: FC = ({}) => {
                 </FormItem>
               )}
             />
+
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>languages you speak</FormLabel>
+                  <FormControl>
+                    <Input placeholder="shadcn" {...field} />
+                  </FormControl>
+
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
           </CardContent>
         </Card>
         <Card className="p-4 max-w-2xl w-full  mx-auto my-4">
           <CardTitle>Educations</CardTitle>
           <CardDescription>if you have any kind of education</CardDescription>
           <CardContent>
-            <div className="w-full flex gap-4 py-4 min-h-[300px] ">
+            <div className="w-full flex gap-4 py-4 min-h-[100px] h-fit">
               {data.map((item) => (
                 <div
                   className="bg-gray-50 dark:bg-gray-800 rounded-xl p-2 
@@ -158,6 +173,143 @@ const CvCanadaForm: FC = ({}) => {
                 </div>
               ))}
               <EducationModle data={data} setData={setData} />
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="p-4 max-w-2xl w-full  mx-auto my-4">
+          <CardTitle>Experiance</CardTitle>
+          <CardDescription>if you have any kind of education</CardDescription>
+          <CardContent>
+            <div className="w-full flex gap-4 py-4 min-h-[100px] h-fit">
+              {data.map((item) => (
+                <div
+                  className="bg-gray-50 dark:bg-gray-800 rounded-xl p-2 
+                          
+                          w-[100px] hover:scale-105  transition-all  cursor-pointer hover:bg-violet-600 h-[100px] flex items-center justify-center
+                          "
+                  key={item.degree_name + item.ends_at}
+                >
+                  <p className="truncate text-lg font-semibold text-gray-900 dark:text-white">
+                    {item.degree_name}
+                  </p>
+                </div>
+              ))}
+              <EducationModle data={data} setData={setData} />
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="p-4 max-w-2xl w-full  mx-auto my-4">
+          <CardTitle>Skills</CardTitle>
+          <CardDescription>if you have any kind of education</CardDescription>
+          <CardContent>
+            <div className="w-full flex gap-4 py-4 min-h-[100px] h-fit ">
+              {data.map((item) => (
+                <div
+                  className="bg-gray-50 dark:bg-gray-800 rounded-xl p-2 
+                          
+                          w-[100px] hover:scale-105  transition-all  cursor-pointer hover:bg-violet-600 h-[100px] flex items-center justify-center
+                          "
+                  key={item.degree_name + item.ends_at}
+                >
+                  <p className="truncate text-lg font-semibold text-gray-900 dark:text-white">
+                    {item.degree_name}
+                  </p>
+                </div>
+              ))}
+              <EducationModle data={data} setData={setData} />
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="p-4 max-w-2xl w-full  mx-auto my-4">
+          <CardTitle>Courses</CardTitle>
+          <CardDescription>if you have any kind of education</CardDescription>
+          <CardContent>
+            <div className="w-full flex gap-4 py-4 min-h-[100px] h-fit ">
+              {data.map((item) => (
+                <div
+                  className="bg-gray-50 dark:bg-gray-800 rounded-xl p-2 
+                          
+                          w-[100px] hover:scale-105  transition-all  cursor-pointer hover:bg-violet-600 h-[100px] flex items-center justify-center
+                          "
+                  key={item.degree_name + item.ends_at}
+                >
+                  <p className="truncate text-lg font-semibold text-gray-900 dark:text-white">
+                    {item.degree_name}
+                  </p>
+                </div>
+              ))}
+              <EducationModle data={data} setData={setData} />
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="p-4 max-w-2xl w-full  mx-auto my-4">
+          <CardTitle>social media liks </CardTitle>
+          <CardDescription>
+            we reach out to you throw these so make sure they are currect
+          </CardDescription>
+          <CardContent>
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>facebook url</FormLabel>
+                  <FormControl>
+                    <Input placeholder="shadcn" {...field} />
+                  </FormControl>
+
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>linked in url</FormLabel>
+                  <FormControl>
+                    <Input placeholder="shadcn" {...field} />
+                  </FormControl>
+
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </CardContent>
+        </Card>
+
+        <Card className="p-4 max-w-2xl w-full  mx-auto my-4">
+          <CardTitle>Colors </CardTitle>
+          <CardDescription>
+            we reach out to you throw these so make sure they are currect
+          </CardDescription>
+          <CardContent>
+            <div className="w-full h-[50px] flex items-center gap-x-4 ">
+              <Button className="bg-blue-500 hover:bg-blue-700" size="icon" />
+              <Button className="bg-red-500 hover:bg-red-700" size="icon" />
+              <Button
+                className="bg-yellow-500 hover:bg-yellow-700"
+                size="icon"
+              />
+              <Button
+                className="bg-violet-500 hover:bg-violet-700"
+                size="icon"
+              />
+              <Button
+                className="bg-green-500 hover:bg-green-700 "
+                size="icon"
+              />
+              <Button className="bg-rose-500 hover:bg-rose-700 " size="icon" />
+              <Button className="bg-gray-500 hover:bg-gray-700 " size="icon" />
+              <Button
+                className="bg-orange-500 hover:bg-orange-700 "
+                size="icon"
+              />
             </div>
           </CardContent>
         </Card>

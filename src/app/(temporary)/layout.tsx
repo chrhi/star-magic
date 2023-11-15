@@ -12,22 +12,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = constructMetadata();
 
-export default function RootLayout({
+export default function TemporaryLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <html suppressHydrationWarning lang="en">
-      <Providers>
-        <body
-          className={cn("min-h-screen font-sans antialiased ", inter.className)}
-        >
-          <NoAuthNavBar />
-          {children}
-          <Toaster />
-        </body>
-      </Providers>
-    </html>
-  );
+  return <main>{children}</main>;
 }

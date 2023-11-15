@@ -51,7 +51,7 @@ export function constructMetadata({
     },
     icons,
     metadataBase: new URL("https://quill-blcrm7149-chrhi.vercel.app"),
-    themeColor: "#FFF",
+
     ...(noIndex && {
       robots: {
         index: false,
