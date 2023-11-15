@@ -10,15 +10,15 @@ export const CvCanadaSchema = z.object({
   phone: z.string(),
   address: z.string(),
 
-  education: z.string().array(),
+  education: z.any(),
 
-  experience: z.string().array(),
+  experience: z.any(),
 
-  internshipe: z.string().array(),
+  internshipe: z.any(),
 
-  cources: z.string().array(),
+  cources: z.any(),
 
-  skills: z.string().array(),
+  skills: z.any(),
 
-  hobbies: z.string().array(),
+  hobbies: z.any(),
 });

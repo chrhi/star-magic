@@ -1,21 +1,24 @@
 "use client";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { PropsWithChildren, useState } from "react";
+import { PropsWithChildren } from "react";
 import { Next13ProgressBar } from "next13-progressbar";
+import { ThemeProvider } from "next-themes";
+
+const queryClient = new QueryClient();
 
 const Providers = ({ children }: PropsWithChildren) => {
-  const [queryClient] = useState(() => new QueryClient());
-
   return (
     <QueryClientProvider client={queryClient}>
-      <Next13ProgressBar
-        height="2px"
-        color="#ff4500"
-        options={{ showSpinner: false }}
-        showOnShallow
-      />
-      {children}
+      <ThemeProvider attribute="class">
+        <Next13ProgressBar
+          height="2px"
+          color="#8b5cf6"
+          options={{ showSpinner: false }}
+          showOnShallow
+        />
+        {children}
+      </ThemeProvider>
     </QueryClientProvider>
   );
 };

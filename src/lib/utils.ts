@@ -18,8 +18,8 @@ export function absoluteUrl(path: string) {
 }
 
 export function constructMetadata({
-  title = "Owner ",
-  description = "Owner is an open-source software to make chatting to your PDF files easy.",
+  title = "Star Magic ",
+  description = "Star Magic is an open-source software to make chatting to your PDF files easy.",
   image = "/thumbnail.png",
   icons = "/favicon.ico",
   noIndex = false,

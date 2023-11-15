@@ -1,6 +1,6 @@
 "use client";
 
-import { type FC } from "react";
+import { useState, type FC } from "react";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -25,11 +25,13 @@ import {
   CardTitle,
 } from "../ui/card";
 import EducationModle from "@/app/(temporary)/_components/models/education-modle";
+import { Education } from "@/types";
 
 interface CvCanadaFormAbdullahProps {}
 
 const CvCanadaForm: FC = ({}) => {
-  // 1. Define your form.
+  const [data, setData] = useState<Education[]>([]);
+
   const form = useForm<z.infer<typeof CvCanadaSchema>>({
     //@ts-ignore
     resolver: zodResolver(CvCanadaSchema),
@@ -141,33 +143,32 @@ const CvCanadaForm: FC = ({}) => {
           <CardTitle>Educations</CardTitle>
           <CardDescription>if you have any kind of education</CardDescription>
           <CardContent>
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormControl>
-                    <div className="w-full py-4 min-h-[300px] ">
-                      <EducationModle />
-                    </div>
-                  </FormControl>
-
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+            <div className="w-full flex gap-4 py-4 min-h-[300px] ">
+              {data.map((item) => (
+                <div
+                  className="bg-gray-50 dark:bg-gray-800 rounded-xl p-2 
+                          
+                          w-[100px] hover:scale-105  transition-all  cursor-pointer hover:bg-violet-600 h-[100px] flex items-center justify-center
+                          "
+                  key={item.degree_name + item.ends_at}
+                >
+                  <p className="truncate text-lg font-semibold text-gray-900 dark:text-white">
+                    {item.degree_name}
+                  </p>
+                </div>
+              ))}
+              <EducationModle data={data} setData={setData} />
+            </div>
           </CardContent>
         </Card>
 
-        <Card className="p-4 max-w-2xl w-full  mx-auto my-4">
+        <Card className="p-4 max-w-2xl w-full h-[200px]  mx-auto my-8">
           <CardTitle>Submition</CardTitle>
           <CardDescription>
             make sure all the information are currect{" "}
           </CardDescription>
-          <CardFooter>
-            <Button type="submit" className="mx-auto">
-              Submit
-            </Button>
+          <CardFooter className="w-full h-[100px] flex items-center justify-end">
+            <Button type="submit">Submit</Button>
           </CardFooter>
         </Card>
       </form>

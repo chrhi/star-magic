@@ -18,6 +18,14 @@ model client {
    address            String
    phone              String
    email              String
+
+   education          Json?
+   experience         Json?
+   skills             Json?
+   interships         Json?
+   cources            Json?
+
+
    createAt           DateTime  @default(now())
    updatedAt          DateTime?
 

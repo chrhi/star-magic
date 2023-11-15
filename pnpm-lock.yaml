@@ -77,6 +77,9 @@ dependencies:
   next:
     specifier: 14.0.0
     version: 14.0.0(react-dom@18.2.0)(react@18.2.0)
+  next-themes:
+    specifier: ^0.2.1
+    version: 0.2.1(next@14.0.0)(react-dom@18.2.0)(react@18.2.0)
   next13-progressbar:
     specifier: ^1.0.3
     version: 1.0.3(next@14.0.0)(react@18.2.0)
@@ -3007,6 +3010,18 @@ packages:
   /natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
+
+  /next-themes@0.2.1(next@14.0.0)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-B+AKNfYNIzh0vqQQKqQItTS8evEouKD7H5Hj3kmuPERwddR2TxvDSFZuTj6T7Jfn1oyeUyJMydPl1Bkxkh0W7A==}
+    peerDependencies:
+      next: '*'
+      react: '*'
+      react-dom: '*'
+    dependencies:
+      next: 14.0.0(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
 
   /next13-progressbar@1.0.3(next@14.0.0)(react@18.2.0):
     resolution: {integrity: sha512-Fl7LMB3EOA5OHwPjAoo+aOxc5ZIj2zoLdjYfWAJXabkjjgsoXIwW/CSxsn4EhNwG7ZP+V2wgjurw40IoFtmrgQ==}
