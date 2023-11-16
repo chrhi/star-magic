@@ -1,5 +1,4 @@
 import { Github, Sparkle, Twitter } from "lucide-react";
-
 import { Balancer } from "react-wrap-balancer";
 import { Button } from "@/components/ui/button";
 import { HeroIllustration, BackgroundGrid } from "./hero-illustration";
