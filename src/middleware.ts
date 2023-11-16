@@ -3,6 +3,7 @@ import { authMiddleware, clerkClient } from "@clerk/nextjs";
 export default authMiddleware({
   // Public routes are routes that don't require authentication
   publicRoutes: [
+    "/services",
     "/thank-you",
     "/form",
     "/",
