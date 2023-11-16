@@ -1,11 +1,4 @@
-import {
-  Sparkles,
-  Github,
-  Mail,
-  Sparkle,
-  Twitter,
-  Compass,
-} from "@/components/icons";
+import { Github, Sparkle, Twitter } from "lucide-react";
 
 import { Balancer } from "react-wrap-balancer";
 import { Button } from "@/components/ui/button";
