@@ -13,8 +13,8 @@ const page: FC = ({}) => {
       "
       >
         <TypographyH1>
-          Cv <span className="text-violet-600">Canada</span> Information
-          Collectore
+          Cv <span className="text-violet-600">Canada et Europe </span>
+          Collecteur d&apos;informations
         </TypographyH1>
         {/* why we collect these informations  */}
       </div>

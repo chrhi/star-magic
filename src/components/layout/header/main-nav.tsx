@@ -1,17 +1,7 @@
 import Link from "next/link";
 import MaxWidthWrapper from "../../MaxWidthWrapper";
-import { buttonVariants } from "../../ui/button";
-
-import { ArrowRight } from "lucide-react";
-
-import MobileNav from "./mobil-nav";
 import Image from "next/image";
 import { PagesNav } from "./navs";
-import SearchBar from "./dropDown/SearchBar";
-import MessageNofinications from "./dropDown/MessageNofinications";
-import TaskNotifictions from "./dropDown/TaskNotifictions";
-
-import DropDowsMenu from "./dropDown/user-nav";
 
 const Navbar = () => {
   return (
@@ -24,13 +14,7 @@ const Navbar = () => {
             </Link>
             <PagesNav />
           </div>
-          <div className=" w-[50%] md:w-[25%] h-[60px] gap-x-5 flex justify-end items-center mr-2">
-            <SearchBar />
-            <MessageNofinications />
-            <TaskNotifictions />
-
-            <DropDowsMenu />
-          </div>
+          <div className=" w-[50%] md:w-[25%] h-[60px] gap-x-5 flex justify-end items-center mr-2"></div>
         </div>
       </MaxWidthWrapper>
     </nav>

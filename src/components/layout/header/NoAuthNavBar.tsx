@@ -3,7 +3,6 @@ import MaxWidthWrapper from "../../MaxWidthWrapper";
 import Image from "next/image";
 
 import { ThemeToggle } from "@/components/theme-toggle";
-import { Button } from "@/components/ui/button";
 
 const NoAuthNavBar = () => {
   return (

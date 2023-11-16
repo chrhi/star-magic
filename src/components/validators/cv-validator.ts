@@ -21,4 +21,7 @@ export const CvCanadaSchema = z.object({
   skills: z.any(),
 
   hobbies: z.any(),
+  facebook_url: z.string(),
+  linkedInUrl: z.string(),
+  lang: z.string(),
 });
