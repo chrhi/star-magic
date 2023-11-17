@@ -8,7 +8,7 @@ type SubmitionData = {
   email: string;
   facebook_url: string;
   first_name: string;
-  isCanada: boolean;
+
   lang: string;
   last_name: string;
   linked_in_url: string;
@@ -31,7 +31,7 @@ export const submitCvRequestAction = async (params: SubmitionData) => {
         email: params.email,
         facebook_url: params.facebook_url,
         first_name: params.first_name,
-        isCanada: true,
+
         lang: params.lang,
         last_name: params.last_name,
         linked_in_url: params.linked_in_url,

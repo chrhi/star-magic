@@ -83,7 +83,7 @@ const CvCanadaForm: FC = ({}) => {
         facebook_url: values.facebook_url,
         first_name: values.firstName,
         interships: internshipes,
-        isCanada: true,
+
         lang: values.lang,
         last_name: values.lastName,
         linked_in_url: values.linkedInUrl,

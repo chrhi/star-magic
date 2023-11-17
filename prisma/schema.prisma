@@ -18,7 +18,7 @@ model Customer {
    address            String
    phone              String
    email              String
-   isCanada           Boolean
+   
    prefer_color       String
    lang               String
    linked_in_url      String        @db.Text
