@@ -45,16 +45,15 @@ const IntershipModle: FC<EducationModleAbdullahProps> = ({ data, setData }) => {
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle>Add new degree?</AlertDialogTitle>
+          <AlertDialogTitle>Ajouter un nouveau stage</AlertDialogTitle>
           <AlertDialogDescription>
-            This action cannot be undone. This will permanently delete your
-            account and remove your data from our servers.
+            Assurez-vous que toutes les informations sont correctes
           </AlertDialogDescription>
         </AlertDialogHeader>
 
         <div className="w-full h-fit min-h-[400px] flex flex-col ">
           <div className="w-full flex flex-col items-start  gap-y-2 my-4 ">
-            <Label>company name</Label>
+            <Label>Nom de l&apos;entreprise</Label>
             <Input
               onChange={(e) =>
                 setCurrentFormData({
@@ -65,7 +64,7 @@ const IntershipModle: FC<EducationModleAbdullahProps> = ({ data, setData }) => {
             />
           </div>
           <div className="w-full flex flex-col items-start  gap-y-2 my-4 ">
-            <Label>start at</Label>
+            <Label>commencer à</Label>
             <Input
               onChange={(e) =>
                 setCurrentFormData({
@@ -76,7 +75,7 @@ const IntershipModle: FC<EducationModleAbdullahProps> = ({ data, setData }) => {
             />
           </div>
           <div className="w-full flex flex-col items-start  gap-y-2 my-4 ">
-            <Label>ends at</Label>
+            <Label>fini à</Label>
             <Input
               onChange={(e) =>
                 setCurrentFormData({
@@ -102,8 +101,10 @@ const IntershipModle: FC<EducationModleAbdullahProps> = ({ data, setData }) => {
         </div>
 
         <AlertDialogFooter>
-          <AlertDialogCancel>Cancel</AlertDialogCancel>
-          <AlertDialogAction onClick={handleSubmit}>Continue</AlertDialogAction>
+          <AlertDialogCancel>Annuler</AlertDialogCancel>
+          <AlertDialogAction onClick={handleSubmit}>
+            Continuer
+          </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>

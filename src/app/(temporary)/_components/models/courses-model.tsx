@@ -3,7 +3,6 @@ import {
   AlertDialogAction,
   AlertDialogCancel,
   AlertDialogContent,
-  AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
@@ -45,16 +44,14 @@ const CoursesModle: FC<EducationModleAbdullahProps> = ({ data, setData }) => {
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle>Add new degree?</AlertDialogTitle>
-          <AlertDialogDescription>
-            This action cannot be undone. This will permanently delete your
-            account and remove your data from our servers.
-          </AlertDialogDescription>
+          <AlertDialogTitle>
+            Ajouter un nouveau cours que vous avez suivi ?
+          </AlertDialogTitle>
         </AlertDialogHeader>
 
         <div className="w-full h-fit min-h-[400px] flex flex-col ">
           <div className="w-full flex flex-col items-start  gap-y-2 my-4 ">
-            <Label>from where did you get your course </Label>
+            <Label>d&apos;où as-tu suivi ton cours </Label>
             <Input
               onChange={(e) =>
                 setCurrentFormData({
@@ -65,7 +62,7 @@ const CoursesModle: FC<EducationModleAbdullahProps> = ({ data, setData }) => {
             />
           </div>
           <div className="w-full flex flex-col items-start  gap-y-2 my-4 ">
-            <Label>title </Label>
+            <Label>titre ou nom du diplôme </Label>
             <Input
               onChange={(e) =>
                 setCurrentFormData({
@@ -76,7 +73,7 @@ const CoursesModle: FC<EducationModleAbdullahProps> = ({ data, setData }) => {
             />
           </div>
           <div className="w-full flex flex-col items-start  gap-y-2 my-4 ">
-            <Label>Started at </Label>
+            <Label>Commencé à </Label>
             <Input
               onChange={(e) =>
                 setCurrentFormData({
@@ -87,7 +84,7 @@ const CoursesModle: FC<EducationModleAbdullahProps> = ({ data, setData }) => {
             />
           </div>
           <div className="w-full flex flex-col items-start  gap-y-2 my-4 ">
-            <Label>Ends at </Label>
+            <Label>Fini à</Label>
             <Input
               onChange={(e) =>
                 setCurrentFormData({
@@ -100,8 +97,10 @@ const CoursesModle: FC<EducationModleAbdullahProps> = ({ data, setData }) => {
         </div>
 
         <AlertDialogFooter>
-          <AlertDialogCancel>Cancel</AlertDialogCancel>
-          <AlertDialogAction onClick={handleSubmit}>Continue</AlertDialogAction>
+          <AlertDialogCancel>Annuler</AlertDialogCancel>
+          <AlertDialogAction onClick={handleSubmit}>
+            Continuer
+          </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>

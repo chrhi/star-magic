@@ -24,4 +24,5 @@ export const CvCanadaSchema = z.object({
   facebook_url: z.string(),
   linkedInUrl: z.string(),
   lang: z.string(),
+  cv_used_for: z.string(),
 });

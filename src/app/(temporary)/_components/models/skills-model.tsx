@@ -41,16 +41,13 @@ const SkillModle: FC<EducationModleAbdullahProps> = ({ data, setData }) => {
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle>Add new degree?</AlertDialogTitle>
-          <AlertDialogDescription>
-            This action cannot be undone. This will permanently delete your
-            account and remove your data from our servers.
-          </AlertDialogDescription>
+          <AlertDialogTitle>Ajouter une nouvelle compétence?</AlertDialogTitle>
+          <AlertDialogDescription></AlertDialogDescription>
         </AlertDialogHeader>
 
-        <div className="w-full h-fit min-h-[400px] flex flex-col ">
+        <div className="w-full h-fit min-h-[100px] flex flex-col ">
           <div className="w-full flex flex-col items-start  gap-y-2 my-4 ">
-            <Label>Add new skill </Label>
+            <Label>le nom de la compétence </Label>
             <Input
               onChange={(e) =>
                 setCurrentFormData({
@@ -62,8 +59,10 @@ const SkillModle: FC<EducationModleAbdullahProps> = ({ data, setData }) => {
         </div>
 
         <AlertDialogFooter>
-          <AlertDialogCancel>Cancel</AlertDialogCancel>
-          <AlertDialogAction onClick={handleSubmit}>Continue</AlertDialogAction>
+          <AlertDialogCancel>Annuler</AlertDialogCancel>
+          <AlertDialogAction onClick={handleSubmit}>
+            Continuer
+          </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
