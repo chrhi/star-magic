@@ -92,7 +92,6 @@ const CvCanadaForm: FC = ({}) => {
         skills,
         cv_used_for: values.cv_used_for,
       });
-      router.push("/thank-you");
     } catch (err) {
       console.log(err);
       toast({
@@ -106,6 +105,7 @@ const CvCanadaForm: FC = ({}) => {
         description:
           "NOUS allons commencer à travailler sur votre CV maintenant",
       });
+      router.push("/thank-you");
     }
   }
 
