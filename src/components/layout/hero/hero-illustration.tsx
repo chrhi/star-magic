@@ -50,8 +50,8 @@ export function HeroIllustration() {
           username="bigmang"
           className="absolute"
           difficulty="HADR"
-          prompt="Implement a union type of number and string"
-          title="Implement a union type of number and string"
+          prompt="hi i am abdellah chehri the founder of..."
+          title="CV / Resume "
         />
       </motion.div>
       <motion.div
@@ -71,11 +71,11 @@ export function HeroIllustration() {
         }}
       >
         <HeroChallengeCard
-          username="matt"
+          username="Abdullah chehri"
           className="absolute"
           difficulty="HADR"
-          prompt="Convert a string literal to a number"
-          title="String to Number"
+          prompt="my dear company"
+          title="My cover letter"
         />
       </motion.div>
     </div>

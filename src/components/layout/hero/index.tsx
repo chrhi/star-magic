@@ -185,27 +185,25 @@ export async function Hero() {
               <span className="animate-bg-gradient-to-center relative flex items-center bg-gradient-to-r to-70% bg-[length:420%_420%] bg-clip-text bg-right-bottom text-transparent duration-500 group-hover:bg-left-top dark:from-yellow-500 dark:via-white dark:to-[#8b5cf6]">
                 <Sparkle className="animate-oldstar absolute  -left-1 top-0.5 mr-2 h-5 w-5 translate-x-0.5 stroke-[#8b5cf6] stroke-2 duration-500 group-hover:rotate-180 group-hover:scale-110 group-hover:stroke-yellow-600 dark:duration-500  " />
                 <Sparkle className="animate-newstar mr-2 h-4 w-4 stroke-[#8b5cf6] stroke-2 duration-500 group-hover:rotate-180 group-hover:scale-110 group-hover:fill-[#8b5cf6] dark:stroke-white dark:duration-500 dark:group-hover:fill-white" />{" "}
-                Star us on GitHub
+                Star Magic
               </span>
             </div>
           </a>
           <div className="relative flex w-full items-center justify-center gap-4 lg:justify-start">
             <div className="absolute left-1/2 top-1/2 -z-10 hidden h-56 w-56 -translate-x-[15%] -translate-y-[50%] rounded-full bg-slate-400/10 blur-3xl dark:block" />
             <div className="absolute right-1/2 top-1/2 -z-10 hidden h-56 w-56 -translate-y-[40%] rounded-full bg-[#8b5cf6]/20 blur-3xl dark:block" />
-            <TypeHeroLogo3D />
+            {/* <TypeHeroLogo3D /> */}
             <h1 className="animate-bg-gradient-to-center-title dark:to-69% bg-gradient-to-br from-[#8b5cf6] from-[69%] to-black/0 bg-clip-text bg-right-bottom text-6xl font-extrabold text-transparent dark:from-white dark:from-30% dark:via-[#8b5cf6] dark:to-[#8b5cf6] dark:bg-[length:300%_300%] sm:text-8xl sm:leading-[5.5rem]">
-              Star
+              MODERN DAY
               <br />
-              Magic
+              ALCHEMY
             </h1>
           </div>
 
           <p className="max-w-[55ch] bg-transparent text-center font-medium leading-8 text-black/60 dark:text-white/50 sm:px-8 lg:px-0 lg:text-left">
             <Balancer>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. A illum
-              autem explicabo, ut ipsum eius. Aperiam eos aut doloribus! Vero
-              asperiores cumque hic repellat magnam labore molestias tempore
-              accusamus id!
+              We help business owners and individuals achieve Spine-chilling
+              results through custom websites and design templates
             </Balancer>
           </p>
           <div className="flex flex-col-reverse gap-3 md:flex-row">
