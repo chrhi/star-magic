@@ -26,7 +26,6 @@ export default function RootLayout({
             inter.className
           )}
         >
-          <NoAuthNavBar />
           {children}
           <Toaster />
         </body>

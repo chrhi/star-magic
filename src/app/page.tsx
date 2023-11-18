@@ -8,7 +8,7 @@ export default function Home() {
     <MaxWidthWrapper>
       <Hero />
       <Features />
-      {/* <BookCall /> */}
+      <BookCall />
     </MaxWidthWrapper>
   );
 }

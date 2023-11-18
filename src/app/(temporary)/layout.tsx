@@ -17,5 +17,10 @@ export default function TemporaryLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <main>{children}</main>;
+  return (
+    <main>
+      <NoAuthNavBar />
+      {children}
+    </main>
+  );
 }

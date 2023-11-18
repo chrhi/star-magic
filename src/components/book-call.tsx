@@ -1,17 +1,14 @@
-import React, { type FC } from "react";
-import { Calendar } from "./ui/calendar";
-import Image from "next/image";
-import Balancer from "react-wrap-balancer";
+"use client";
 import DogeSmile from "@/assets/images/doge.webp";
-
-interface BookCallAbdullahProps {}
+import Image from "next/image";
+import React, { type FC } from "react";
+import { InlineWidget } from "react-calendly";
+import Balancer from "react-wrap-balancer";
 
 const BookCall: FC = ({}) => {
-  const [date, setDate] = React.useState<Date | undefined>(new Date());
-
   return (
-    <div className="flex flex-col gap-y-4">
-      <div className="mt-1 flex flex-col gap-3 px-4 text-center sm:px-0">
+    <div className="w-[400px] my-8 mx-auto">
+      <div className="mt-1 flex flex-col my-4 gap-3 px-4 text-center sm:px-0">
         <a
           className="mx-auto hidden rounded-full bg-gradient-to-r from-[#31bdc6] to-[#3178c6] p-[1px] brightness-90 contrast-150 focus:outline-none focus:ring-blue-600 focus-visible:ring-2 dark:brightness-125 dark:contrast-100 sm:block"
           href="#features"
@@ -25,7 +22,7 @@ const BookCall: FC = ({}) => {
               >
                 <path d="m19.2 36.4-4.75-10.45L4 21.2l10.45-4.75L19.2 6l4.75 10.45L34.4 21.2l-10.45 4.75ZM36.4 42l-2.35-5.25-5.25-2.35 5.25-2.4 2.35-5.2 2.4 5.2 5.2 2.4-5.2 2.35Z" />
               </svg>
-              our services, wow{" "}
+              book a call, wow{" "}
               <Image
                 className="absolute -bottom-1 right-1 translate-y-7 duration-300 group-hover:translate-y-0"
                 alt="doge smile"
@@ -37,24 +34,16 @@ const BookCall: FC = ({}) => {
           </div>
         </a>
         <h1 className="text-4xl font-bold">
-          <Balancer>What&apos;s in Star Magic?</Balancer>
+          <Balancer>Have A General Inquiry?</Balancer>
         </h1>
         <p className="text-black/50 dark:text-white/50">
-          <Balancer>All you need in one place</Balancer>
+          <Balancer>
+            If you have a general inquiry and would like to speak to our expert
+            team
+          </Balancer>
         </p>
       </div>
-      <div className="w-full h-[500px] flex justify-center items-center gap-x-8">
-        <div className="w-[300px] h-full">
-          <Calendar
-            mode="single"
-            selected={date}
-            onSelect={setDate}
-            disabled={new Date()}
-            className="rounded-md border"
-          />
-        </div>
-        <div className="w-[300px] bg-white h-full"></div>
-      </div>
+      <InlineWidget url="https://calendly.com/abdellah-chehri/30min" />
     </div>
   );
 };

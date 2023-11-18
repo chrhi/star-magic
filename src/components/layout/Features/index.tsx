@@ -6,7 +6,6 @@ import FeatureCardChallengeDark1 from "@/assets/images/feature_card_challenge_da
 import FeatureCardChallengeDark2 from "@/assets/images/feature_card_challenge_dark2.png";
 import FeatureCardChallengeLight1 from "@/assets/images/feature_card_challenge_light1.png";
 import FeatureCardChallengeLight2 from "@/assets/images/feature_card_challenge_light2.png";
-import placeholder from "@/assets/images/placeholder1.PNG";
 
 import { ImageCard } from "./feature-card";
 
@@ -62,10 +61,10 @@ export function Features() {
               description="Engage in TypeScript challenges to strengthen your grasp of the type system and advanced features"
               bgClass="md:bg-gradient-to-br"
               image={{
-                dark1: lacehol321,
-                dark2: lacehol321,
-                light1: lacehol321,
-                light2: lacehol321,
+                dark1: FeatureCardChallengeDark2,
+                dark2: FeatureCardChallengeDark1,
+                light1: FeatureCardChallengeLight2,
+                light2: FeatureCardChallengeLight1,
                 alt: "Something",
               }}
               title="Type Challenges"
