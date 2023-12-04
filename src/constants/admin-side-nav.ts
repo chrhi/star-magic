@@ -5,10 +5,10 @@ export const AdminSideNavItems = [
   },
   {
     name: "visa preparation",
-    url: "/chehriabdellah",
+    url: "/chehriabdellah/visa",
   },
   {
     name: "email customers",
-    url: "/chehriabdellah",
+    url: "/chehriabdellah/emails",
   },
 ];
